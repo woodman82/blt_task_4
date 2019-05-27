@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BrightLynxTeam - Test Task 4</title>
+		<style type="text/css">
+			.cell {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border: 1px solid grey;
+				margin-left: -0.25em;
+				line-height: 40px;
+			}
+
+			.cellSym {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				border: 1px solid white;
+				margin-left: -0.25em;
+				text-align: center;
+				line-height: 40px;
+			}
+
+			.cell .cellSym :nth-child(10n+1) {
+				margin-left: 0em;				
+
+			}
+			.desk {
+				width: 444px;
+				height: 440px;
+				border: 1px solid red;
+				margin: 0 auto 0 auto;
+				padding-left: 25px;
+				line-height: 0.1em;
+			}
+			span {
+				opacity: 0;
+			}
+
+		</style>		
+	</head>
+	<body>	
+		<div class="desk">	
+			
+			<div class="cellSym"><span>_</span></div>
+			<div class="cellSym">A</div> <div class="cellSym">B</div> 
+			<div class="cellSym">C</div> <div class="cellSym">D</div> 
+			<div class="cellSym">E</div> <div class="cellSym">F</div> 
+			<div class="cellSym">G</div> <div class="cellSym">H</div> 
+			<div class="cellSym"><span>_</span></div>
+
+			
+			<div class="cellSym">8</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div>
+			<div class="cellSym">8</div>
+
+			<div class="cellSym">7</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">7</div>
+
+			<div class="cellSym">6</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">6</div>
+
+			<div class="cellSym">5</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">5</div>
+
+			<div class="cellSym">4</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">4</div>
+
+			<div class="cellSym">3</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">3</div>
+
+			<div class="cellSym">2</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cellSym">2</div>
+
+			<div class="cellSym">1</div>
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div> 
+			<div class="cell"><span>_</span></div> <div class="cell"><span>_</span></div>
+			<div class="cellSym">1</div>
+
+			<div class="cellSym"><span>_</span></div>
+			<div class="cellSym">A</div> <div class="cellSym">B</div> 
+			<div class="cellSym">C</div> <div class="cellSym">D</div> 
+			<div class="cellSym">E</div> <div class="cellSym">F</div> 
+			<div class="cellSym">G</div> <div class="cellSym">H</div>
+			<div class="cellSym"><span>_</span></div>
+		</div>
+
+		<script type="text/javascript">
+				let cells = document.querySelectorAll('.cell'); 
+				clearDesk(); // очищаем "доску"
+				
+				// пишем в свойства каждой клетки(div-ва) её координаты на доске
+				for(let i = 0; i < cells.length; i++) {
+					cells[i].cellNumX = i % 8; 						// нумеруем div по X
+					cells[i].cellNumY = Math.floor(i / 8) ; 		// нумеруем div по Y
+					cells[i].addEventListener('click', calcSteps); 	// подвешиваем на клик обработку ходов
+				}
+
+				// "Обработка ходов"
+				function calcSteps() {
+					clearDesk();
+					// определяем координаты клетки, по которой кликнули и отмечаем "Синим"
+					let startX = this.cellNumX;
+					let startY = this.cellNumY;
+					cells[startY * 8 + startX].style.backgroundColor = 'blue';
+
+					// задаем ходы Коня (смещения относительно исходной позиции)
+					let stepsHorse = [
+						[1, 2], [2, 1], [2, -1], [1, -2],
+						[-1, -2], [-2, -1], [-2, 1], [-1, 2]
+					];
+					
+					// вычисляем в цикле по массиву ходов Коня координаты каждого хода и красим в зеленый,
+					// учитывая границы доски
+					for (let i = 0; i < stepsHorse.length; i++) {
+						curStepX = this.cellNumX + stepsHorse[i][0];
+						curStepY = this.cellNumY + stepsHorse[i][1];
+						// красим клетку, если не выходит  за пределы поля
+						if ((curStepX < 8) && (curStepY < 8) &&
+							(curStepX >= 0) && (curStepY >= 0)) {
+							cells[curStepY * 8 + curStepX].style.backgroundColor = 'lightgreen';
+						}
+					}	
+				}
+
+				// "Очистка доски"
+				function clearDesk(){
+					for(let i = 0; i < cells.length; i++) {
+						cells[i].style.backgroundColor = 'white';
+						// четная строка
+						if(Math.floor(i / 8) % 2 == 0) {
+							if (i % 2 != 0) cells[i].style.backgroundColor = 'black';
+						} else {
+						// нечетная строка
+							if (i % 2 == 0) cells[i].style.backgroundColor = 'black';
+						};
+					} 
+				}		
+		</script>
+	</body>
+</html>
